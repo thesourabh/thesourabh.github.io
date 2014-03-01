@@ -1,0 +1,110 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+font-family: 'Segoe UI Light';
+background: #eee;
+}
+a{
+text-decoration: none;
+}
+header{
+margin: 0 auto;
+width: 900px;
+font-family: 'Raleway','Segoe UI Light',sans-serif;
+}
+
+.title{
+padding: 10px 0px;
+font-size: 54px;
+color: #111;
+text-shadow: 2px 2px 10px #bbb;
+letter-spacing: -4px;
+}
+.subtitle{
+padding: 10px 0px;
+padding-bottom: 24px;
+font-family: 'Segoe UI Light',sans-serif;
+font-size: 30px;
+color: #666;
+text-shadow: 1px 1px 10px #ddd;
+}
+.title-detail{
+font-size: 26px;
+font-family: 'Open Sans Condensed','Segoe UI Light',sans-serif;
+color: #555;
+position: relative;
+min-height: 100px;
+}
+.title-detail span{
+position: absolute;
+width: 600px;
+right: 20px;
+}
+.content{
+margin: 0 auto;
+width:900px;
+}
+.panel{
+background: #fff;
+width: 45%;
+float: left;
+margin-right: 2%;
+margin-left: 0px;
+padding: 30px 1%;
+border-radius: 4px;
+min-height: 60px;
+box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+}
+.panel .left{
+width: 20%;
+float: left;
+}
+.panel .left .icon{
+background-size: cover;
+margin: 0 auto;
+}
+.movie-panel .icon{
+height: 56px;
+width: 60px;
+background-image: url('images/movie.png');
+}
+.tv-panel .icon{
+height: 66px;
+width: 66px;
+background-image: url('images/tv.png');
+margin-top: -10px !important;
+}
+.panel .right{
+width: 70%;
+float: left;
+margin-left: 20px;
+margin-top: -5px;
+}
+
+.panel h3{
+font-weight: 300;
+font-size: 28px;
+font-family: "Segoe UI Light";
+color: #333;
+}
+.panel p{
+color: #555;
+margin-top: 10px;
+}
+.clear{clear: both;}
+.yearlies{
+margin: 10px 0px;
+}
+.year-block {
+margin-top: 20px;
+width: 300px;
+float: left;
+}
+.footer{
+text-align: center;
+font-size: 12px;
+margin-top: 20px;
+padding: 10px;
+}
