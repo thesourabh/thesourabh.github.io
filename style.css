@@ -3,7 +3,7 @@ margin: 0;
 padding: 0;
 }
 body{
-font-family: 'Segoe UI Light';
+font-family: 'Open Sans','Segoe UI Light', sans-serif;
 background: #eee;
 }
 a{
@@ -25,7 +25,6 @@ letter-spacing: -4px;
 }
 .subtitle{
 padding: 10px 0px;
-font-family: 'Segoe UI Light',sans-serif;
 font-size: 30px;
 color: #666;
 text-shadow: 1px 1px 10px #ddd;
@@ -69,7 +68,34 @@ margin-top: -5px !important;
 .monitor-plus-panel .icon{
 height: 64px;
 width: 64px;
-background-image: url('monitor+/logo.png');
+background-image: url('monitor+/logo - Copy.png');
+}
+.sourabhlikestv-panel .icon{
+height: 56px;
+width: 56px;
+margin-top: 5px!important;
+background-image: url('http://assets.tumblr.com/images/branding_page/img_logo_bluebg_2x.png');
+}
+.facebook-panel .icon{
+height: 64px;
+width: 64px;
+background-image: url('images/facebook-icon.png');
+}
+.twitter-panel .icon{
+height: 64px;
+width: 64px;
+background-image: url('images/twitter-logo.png');
+}
+.google-plus-panel .icon{
+height: 64px;
+width: 64px;
+background-image: url('images/google-plus-icon.jpg');
+}
+.resume-panel .icon{
+height: 74px;
+width: 74px;
+margin-top: -5px!important;
+background-image: url('images/resume-icon.png');
 }
 .panel .right{
 width: 70%;
@@ -81,7 +107,6 @@ margin-top: -5px;
 .panel h3{
 font-weight: 300;
 font-size: 28px;
-font-family: "Segoe UI Light";
 color: #333;
 }
 .panel p{
@@ -96,3 +121,21 @@ font-size: 16px;
 margin-top: 10px;
 padding: 10px;
 }
+
+/*fdsfsdfsdfsd */
+  #forkongithub a{background:#000;color:#fff;text-decoration:none;font-family:arial, sans-serif;
+  text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;
+  transition:0.5s;
+  }
+  #forkongithub a:hover{background:#060;color:#fff;}
+  #forkongithub a::before,#forkongithub a::after{
+  content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;
+  }
+  #forkongithub a::after{bottom:1px;top:auto;}
+  @media screen and (min-width:800px){
+  #forkongithub{
+  position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;}
+  #forkongithub a{
+  width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);
+  box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+  }}
