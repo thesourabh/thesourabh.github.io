@@ -65,16 +65,21 @@ width: 66px;
 background-image: url('images/spark-cinema.gif');
 margin-top: -5px !important;
 }
+.scrcrw-panel .icon{
+height: 66px;
+width: 66px;
+background-image: url('images/scrcrw.png');
+margin-top: -5px !important;
+}
 .monitor-plus-panel .icon{
 height: 64px;
 width: 64px;
 background-image: url('images/monitor+.png');
 }
 .sourabhlikestv-panel .icon{
-height: 56px;
-width: 56px;
-margin-top: 5px!important;
-background-image: url('http://assets.tumblr.com/images/branding_page/img_logo_bluebg_2x.png');
+height: 66px;
+width: 66px;
+background-image: url('images/tumblr-icon.jpg');
 }
 .facebook-panel .icon{
 height: 64px;
