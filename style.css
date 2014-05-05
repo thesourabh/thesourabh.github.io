@@ -91,6 +91,16 @@ height: 64px;
 width: 64px;
 background-image: url('images/twitter-logo.png');
 }
+.linkedin-panel .icon{
+height: 64px;
+width: 64px;
+background-image: url('images/linkedin-logo.png');
+}
+.github-panel .icon{
+height: 70px;
+width: 70px;
+background-image: url('images/github-logo.png');
+}
 .google-plus-panel .icon{
 height: 64px;
 width: 64px;
