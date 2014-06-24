@@ -59,6 +59,11 @@ height: 56px;
 width: 60px;
 background-image: url('list/images/movie.png');
 }
+.locagram-panel .icon{
+height: 64px;
+width: 64px;
+background-image: url('images/locagram.png');
+}
 .spark-panel .icon{
 height: 66px;
 width: 66px;
