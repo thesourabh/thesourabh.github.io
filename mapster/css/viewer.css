@@ -1,0 +1,23 @@
+
+body{
+font-family: MuseoSans, Tahoma, sans-serif;
+font-weight: 100;
+}
+
+#mapster-name-div{width:85%; text-align: center; margin: 0 auto;}
+#login-panel{width: 300px;margin-top: 30px;margin: 0 auto;}
+h1{color: rgb(34,34,34);font-weight: 100;font-family: Tahoma;letter-spacing: 15px;font-size: 54pt;}
+form * {width: 85%!important;margin: 10px;display: block!important;}
+#instagram-login{
+background: url('img/instagram-normal.png') no-repeat;
+text-indent: -9999px;
+height: 29px;
+width: 200px;
+display: block;
+margin: 10px auto;
+}
+#instagram-login:hover{background: url('img/instagram-hover.png');}
+span{margin-top: 10px;}
+
+
+#map{width: 85%; max-width: 500px; height: 400px; margin: 20px auto;}

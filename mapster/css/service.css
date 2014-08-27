@@ -1,0 +1,40 @@
+
+@font-face{font-family:MuseoSans;src:url(http://iconosquare.com/font/Museo/275D84_3_0.eot);font-weight:100;font-style:normal;src:url(http://iconosquare.com/font/Museo/275D84_3_0.eot?#iefix) format('embedded-opentype'),
+url(http://iconosquare.com/font/Museo/275D84_3_0.woff) format('woff')
+url(http://iconosquare.com/font/Museo/275D84_3_0.ttf) format('truetype'),
+url(http://iconosquare.com/font/Museo/275D84_3_0.svg#wf) format('svg')
+}
+
+body{
+font-family: MuseoSans, Tahoma, sans-serif;
+font-weight: 100;
+font-size: 14px;
+}
+
+footer{padding: 10px 0;}
+#mapster-name-div{width:85%; text-align: center; margin: 0 auto;}
+#login-panel{width: 300px;margin-top: 30px;margin: 0 auto;}
+h1{color: rgb(34,34,34);font-weight: 100;font-family: Tahoma;letter-spacing: 15px;font-size: 54pt;}
+h1::after{
+content: 'BETA';
+font-size: 27pt;
+letter-spacing: 2px;
+}
+h1:after{
+content: 'BETA';
+font-size: 27pt;
+letter-spacing: 2px;
+}
+form * {width: 85%!important;margin: 10px;display: block!important;}
+#instagram-login{
+background: url('img/instagram-normal.png') no-repeat;
+text-indent: -9999px;
+height: 29px;
+width: 200px;
+display: block;
+margin: 10px auto;
+}
+#instagram-login:hover{background: url('img/instagram-hover.png');}
+span{margin-top: 10px;}
+
+#map{width: 85%; height: 400px; margin: 20px auto;}
