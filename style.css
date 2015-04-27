@@ -32,6 +32,7 @@ text-shadow: 1px 1px 10px #ddd;
 .content{
 margin: 0 auto;
 max-width:900px;
+min-width: 430px;
 min-height: 300px;
 padding-left: 5%;
 }
