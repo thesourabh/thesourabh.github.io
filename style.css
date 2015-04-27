@@ -12,7 +12,7 @@ text-decoration: none;
 header{
 margin: 0 auto;
 margin-bottom: 40px;
-width: 900px;
+max-width: 900px;
 font-family: 'Raleway','Segoe UI Light',sans-serif;
 }
 
@@ -31,7 +31,7 @@ text-shadow: 1px 1px 10px #ddd;
 }
 .content{
 margin: 0 auto;
-width:900px;
+max-width:900px;
 min-height: 300px;
 padding-left: 5%;
 }
@@ -148,7 +148,7 @@ margin-top: 10px;
 padding: 10px;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 936px) {
 
 header{
 width: 100%;
@@ -156,4 +156,23 @@ width: 100%;
 .panel{
 width: 90%;
 }
+
+.content {
+margin: 0 auto;
+padding: 0;
+width: 80%;
+}
+
+.panel{
+float: none;
+margin-top: 10px auto;
+border-radius: 4px;
+min-height: 90px;
+box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+}
+
+
+
+
+
 	}
