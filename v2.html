@@ -14,32 +14,41 @@ body, h3 {margin: 0;}
 body {
 font-family: 'Open Sans', sans-serif;
 }
+
+h3{
+color: #000;
+margin-bottom: 40px;
+font-weight: 400;
+text-shadow: 0px 1px 1px #111;
+}
+
 #v2-content section.section{
 text-align: center;
 padding: 60px;
 }
 .logo-row {
-margin-top: 40px;
 display: inline-block;
 text-align: center;
 }
 
 footer {text-align: center; font-size: 9pt;
-background-color: #070721; color: #fff;
+background-color: #041322; color: #fff;
 padding: 20px 0;
 }
-#tech-wrapper h3 {color: #222;}
-#edu-wrapper h3 {color: #222;}
+
 
 #tech-wrapper {background-color: #f4a543;}
 #entertainment-wrapper {background-color: #4CAF50;}
 #edu-wrapper {background-color: #F44336;}
-#social-media-wrapper {background-color: #FFEB3B;}
+#social-media-wrapper {background-color: #e5f0f6;}
 
-#technologies {height: 50px;}
+
+#technologies {height: 50px; max-width: 600px;}
 #education {height: 80px;}
 #entertainment {margin-top: 0;}
-#social-media {height: 3em;}
+#social-media {height: 50px;}
+
+#tech-wrapper h3{color: #000;}
 
 .known {
 height: 100%;
@@ -154,6 +163,11 @@ a {color: inherit;}
 #profpicbox{left: 5%;top: -120px;}
 #prof{width: 100px;height: 100px;}
 #profname{font-size: 130%;font-size: 6vw;margin-top: 60px;}
+
+#technologies {height: 25px;}
+#education {height: 60px;}
+#social-media {height: 30px;}
+.logo-row img {margin: 0 2px;}
 }
 </style>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -161,10 +175,9 @@ a {color: inherit;}
         <script type="text/javascript">
 		var map;
 		var mainCenter = new google.maps.LatLng(22.125254, 64.783432);
-        /* old land red: #703030
-		
-		
-		*/
+			//  "color": "#703030"
+		var landColor = "#703030";
+		var seaColor = "#1f242b";
             function init() {
                 // Basic options for a simple Google Map
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -174,6 +187,7 @@ a {color: inherit;}
                     center: mainCenter, // Pune, Dubai midpoint
 					disableDefaultUI: true,
 					scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: false,
+					disableDoubleClickZoom: true,
                     // How you would like to style the map. 
                     styles: [{"stylers": [{"visibility": "off"}]},
     {
@@ -183,7 +197,7 @@ a {color: inherit;}
                 "visibility": "on"
             },
             {
-                "color": "#2f343b"
+                "color": seaColor
             }
         ]
     },
@@ -194,7 +208,7 @@ a {color: inherit;}
                 "visibility": "on"
             },
             {
-                "color": "#703030"
+                "color": landColor
             }
         ]
     },
@@ -384,7 +398,6 @@ a[href^="https://maps.google.com/maps"], a[href^="http://maps.google.com/maps"]{
 		</div>
 </section>
 <section id="social-media-wrapper" class="section">
-		<h3>Social Media</h3>
 		<div id="social-media" class="logo-row">
 			<div class="known">
 				<a href="https://www.facebook.com/thesourabh">

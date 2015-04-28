@@ -22,7 +22,7 @@ font-weight: 400;
 height: 100%;
 overflow: hidden;
 width: 100%;
-background: url(mockwide.jpg);
+background: url(mockbig.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 	text-align: center;
@@ -30,23 +30,31 @@ background: url(mockwide.jpg);
 #mock-text {
 display: inline-block;
 text-align: center;
-position: absolute;
-right: 18%;
-top: 30%;
+
+	position: absolute;
+	top: 50%;
+	right: 18%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
 }
 #mock h1{
-font-family: Book Antiqua, Cooper STD, serif;
+font-family: Book Antiqua, serif;
 color: white;
 text-shadow: 2px 2px 2px #000;
 font-weight: 100;
 font-size: 52pt;
 padding-bottom: 5px;
 border-bottom: 1px solid white;
+letter-spacing: 4px;
 }
 #mock h3{
 color: white;
 margin-bottom: 40px;
 margin-top: 10px;
+font-size: 12pt;
+letter-spacing: 2px;
 }
 #download-now {
 margin-top: 100px;
@@ -74,11 +82,17 @@ margin-left: auto;
 margin-right: auto;
 }
 }
+#overlay{
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0, 0.5);
+}
 </style>
 </head>
 <body>
 
 <div id="mock">
+<div id="overlay"></div>
 <div id="mock-text">
 <h1>Argus</h1>
 <h3>An Android app to secure your desktop</h3>
