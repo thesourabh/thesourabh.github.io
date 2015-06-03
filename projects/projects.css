@@ -78,6 +78,9 @@ img {
     -webkit-animation-delay: 2.3s;
     -moz-animation-delay: 2.3s;
     animation-delay: 1.3s!important;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-duration: 1.5s!important;
 }
 header,
 .project {
@@ -199,8 +202,9 @@ header {
     text-align: left;
 }
 #map-text {
-    right: 5%;
-    width: 40%;
+    right: 10%;
+	width: 300px;
+    max-width: 40%;
 }
 @media screen and (max-width: 716px) {
     .project:not(#argus):not(#map-project) {
@@ -314,10 +318,28 @@ header {
     box-shadow: 0 0 0 0px #f44, 1.5em 0 0 0px #9b3, 3em 0 0 0px #fb5;
 }
 footer {
-	text-align: center;
-	font-size: 9pt;
-	background-color: #041322;
-	color: #fff;
-	padding: 20px 0;
+    text-align: center;
+    font-size: 9pt;
+    background-color: #041322;
+    color: #fff;
+    padding: 20px 0;
 }
-#map-internal{z-index: 3000; position: absolute;}
+#map {
+    width: 100%;
+    height: 100%;
+}
+a[href^="https://maps.google.com/maps"],
+a[href^="http://maps.google.com/maps"] {
+    display: none !important
+}
+.gmnoprint a,
+.gmnoprint span {
+    display: none;
+}
+.gmnoprint div {
+    background: none !important;
+}
+#map-internal {
+    z-index: 3000;
+    position: absolute;
+}
