@@ -1,123 +1,206 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-<title>Projects | Sourabh Shetty</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="author" content="Sourabh Shetty">
-<link rel="author" href="https://plus.google.com/116689635100187719735" />
-<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
-<style>
-html, body {height: 100%;}
-*{margin: 0; padding: 0;}
-img {display: block;}
-body, h3 {margin: 0;}
-body {
-font-family: Segoe UI, sans-serif;
-}
-h3{
-font-weight: 400;
-}
+    <title>Projects | Sourabh Shetty</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Sourabh Shetty">
+    <link rel="author" href="https://plus.google.com/116689635100187719735" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href="projects.css" rel="stylesheet">
+    <!-- Maps Module -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        var map;
+        var mainCenter = new google.maps.LatLng(22.125254, 64.783432);
+        //  "color": "#703030"
+        var landColor = "#703030";
+        var seaColor = "#1f242b";
 
-.project{
-height: 100%;
-width: 100%;
-overflow: hidden;
-position: relative;
-}
-#argus{
-background: url(argus/mockbig.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-text-align: center;
-}
-#mapster{
-background-color: #517fa4;
-}
-.project-text, .project-video{
-display: inline-block;
-text-align: center;
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
--webkit-transform: translateY(-50%);
--o-transform: translateY(-50%);
--moz-transform: translateY(-50%);
-}
-#argus-text {right: 18%;}
-#mapster-text {left: 10%; width: 40%;}
-#mapster-video {right: 5%;}
-iframe#mapster-video{width: 40%;}
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                zoom: 4,
+                // The latitude and longitude to center the map (always required)
+                center: mainCenter, // Pune, Dubai midpoint
+                disableDefaultUI: true,
+                scrollwheel: false,
+                navigationControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                draggable: false,
+                disableDoubleClickZoom: true,
+                // How you would like to style the map. 
+                styles: [{
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "water",
+                    "stylers": [{
+                        "visibility": "on"
+                    }, {
+                        "color": seaColor
+                    }]
+                }, {
+                    "featureType": "landscape",
+                    "stylers": [{
+                        "visibility": "on"
+                    }, {
+                        "color": landColor
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "visibility": "off"
+                    }, {
+                        "color": "#2f343b"
+                    }, {
+                        "weight": 1
+                    }]
+                }]
+            };
 
-.project-text h1{
-font-family: Book Antiqua, serif;
-color: white;
-text-shadow: 2px 2px 2px #000;
-font-weight: 100;
-font-size: 52pt;
-padding-bottom: 5px;
-border-bottom: 1px solid white;
-letter-spacing: 4px;
-}
-.project-text h3{
-color: white;
-margin-bottom: 40px;
-margin-top: 10px;
-font-size: 12pt;
-letter-spacing: 2px;
-}
-#download-now {
-margin-top: 100px;
-color: rgba(255,255,255,0.7);
-border: 1px solid rgba(255,255,255,0.7);
-border-radius: 5px;
-padding: 1em .75em;
-letter-spacing: .15em;
-text-decoration: none;
-transition: all 0.3s ease 0s;
-}
-#download-now:hover {
-color: rgba(255,255,255,1);
-border: 1px solid rgba(255,255,255,1);
-}
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
 
-@media screen and (max-width: 600px) {
+            // Create the Google Map using our element and options defined above
+            map = new google.maps.Map(mapElement, mapOptions);
 
-#argus-text {
-position: absolute;
-right: 0;
-left: 0;
-width: 70%;
-margin-left: auto;
-margin-right: auto;
-}
-}
-#overlay{
-width: 100%;
-height: 100%;
-background-color: rgba(0,0,0, 0.5);
-}
-</style>
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(18.5203, 73.8567),
+                map: map,
+                title: 'Pune'
+            });
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(25.2048, 55.2708),
+                map: map,
+                title: 'Dubai'
+            });
+
+        }
+
+
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        google.maps.event.addDomListener(window, "resize", function() {
+            var center = map.getCenter();
+            google.maps.event.trigger(map, 'resize');
+            map.setCenter(center);
+        });
+    </script>
+    <style>
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        a[href^="https://maps.google.com/maps"],
+        a[href^="http://maps.google.com/maps"] {
+            display: none !important
+        }
+        .gmnoprint a,
+        .gmnoprint span {
+            display: none;
+        }
+        .gmnoprint div {
+            background: none !important;
+        }
+    </style>
 </head>
+
 <body>
 
-<div id="argus" class="project">
-<div id="overlay"></div>
-<div id="argus-text" class="project-text">
-<h1>Argus</h1>
-<h3>An Android app to secure your desktop</h3>
-<a href="argus" id="download-now">DOWNLOAD NOW</a>
-</div>
-</div>
-<div id="mapster" class="project">
-<div id="mapster-text" class="project-text">
-<h1>Mapster</h1>
-<h3>Find pictures posted anywhere in the world by clicking on a map.</h3>
-<a href="mapster" id="download-now">VISIT NOW</a>
-</div>
-<iframe id="mapster-video" class="project-video" width="560" height="315" src="https://www.youtube.com/embed/P_ouYTodgQI" frameborder="0" allowfullscreen> </iframe>
-</div>
-
+    <header>
+        <div class="title-block">
+            <div class="subtitle">Projects Made By</div>
+            <div class="title">Sourabh Shetty</div>
+        </div>
+    </header>
+    <div class="project"></div>
+    <div id="argus" class="project">
+        <div class="overlay"></div>
+        <div id="argus-text" class="project-text">
+            <h1>Argus</h1>
+            <h3>An Android app to secure your desktop</h3>
+            <a href="argus" class="download-now">FIND OUT MORE</a>
+        </div>
+    </div>
+    <div id="mapster" class="project">
+        <div id="mapster-text" class="project-text">
+            <h1>Mapster</h1>
+            <h3>Find Instagram pictures posted anywhere in the world by clicking on a map</h3>
+            <a href="mapster" class="download-now">FIND OUT MORE</a>
+        </div>
+        <iframe id="mapster-video" class="project-video" width="560" height="315" src="https://www.youtube.com/embed/P_ouYTodgQI" frameborder="0" allowfullscreen> </iframe>
+    </div>
+    <div id="scrcrw" class="project">
+        <div class="overlay"></div>
+        <div id="scrcrw-text" class="project-text">
+            <h1>scrcrw</h1>
+            <h3>Website redesign</h3>
+            <a href="images/scrcrw.png" class="download-now">FIND OUT MORE</a>
+        </div>
+        <div class="browser-mockup project-image" id="scrcrw-image">
+            <img src="img/screens/scrcrw.png" />
+        </div>
+    </div>
+    <div id="spark" class="project">
+        <div class="overlay"></div>
+        <div id="spark-text" class="project-text">
+            <h1>Spark Cinema</h1>
+            <h3>Website development for college course</h3>
+            <a href="images/spark.png" class="download-now">FIND OUT MORE</a>
+        </div>
+        <div class="browser-mockup project-image" id="spark-image">
+            <img src="img/screens/spark.png" />
+        </div>
+    </div>
+    <div id="cardshare" class="project">
+        <div class="overlay"></div>
+        <div id="cardshare-text" class="project-text">
+            <h1>CardShare</h1>
+            <h3>Contact sharing application made entirely in Visual Basic 6 for a college course</h3>
+            <a href="images/spark.png" class="download-now">FIND OUT MORE</a>
+        </div>
+        <img src="img/screens/cardshare.png" class="project-image" id="cardshare-image" />
+    </div>
+    <div id="scripts" class="project">
+        <div class="overlay"></div>
+        <div id="scripts-text" class="project-text">
+            <h1>Scripts & Other Projects</h1>
+            <h3>Smaller scripts, projects for personal use, and shelved projects</h3>
+            <a href="http://github.com/thesourabh" class="download-now">FIND OUT MORE</a>
+        </div>
+        <div id="scripts-list" class="project-list">
+            <ul>
+                <li>Locagram</li>
+                <li>TV Canary</li>
+                <li>Monitor+</li>
+                <li>Gfycat Bulk Uploader</li>
+                <li>University Result Scraper / Rank List Generator</li>
+                <li>IMDb Scraper</li>
+            </ul>
+        </div>
+    </div>
+	<div id="map-project" class="project">
+    <div id="map"></div>
+	<div id="map-text" class="project-text">
+		<h1>Currently Available</h1>
+		<h3>In these locations</h3>
+	</div>
+	</div>
+    <footer>
+        Copyright &copy; 2015 Sourabh Shetty
+    </footer>
 
 </body>
+
 </html>
