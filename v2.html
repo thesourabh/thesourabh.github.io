@@ -7,12 +7,38 @@
 <meta name="author" content="Sourabh Shetty">
 <link rel="author" href="https://plus.google.com/116689635100187719735" />
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 <style>
 html, body{height: 100%;}
 body, h3 {margin: 0;}
 body {
 font-family: 'Open Sans', sans-serif;
+background: #f5f5f5;
+}
+
+header{
+margin: 0 auto;
+color: #222222;
+height: 100%;
+overflow: hidden;
+width: 100%;
+font-family: 'Raleway','Segoe UI Light',sans-serif;
+text-align: center;
+}
+
+.title{
+font-size: 5em;
+color: #111;
+letter-spacing: -4px;
+}
+
+.subtitle{
+color: #222;
+font-size: 2em;
+font-family: 'Open Sans','Segoe UI Light',sans-serif;
+font-weight: 300;
 }
 
 h3{
@@ -20,11 +46,15 @@ color: #000;
 margin-bottom: 40px;
 font-weight: 400;
 text-shadow: 0px 1px 1px #111;
+letter-spacing: 1px;
 }
 
-#v2-content section.section{
+section{
 text-align: center;
-padding: 60px;
+height: 100%;
+overflow: hidden;
+width: 100%;
+
 }
 .logo-row {
 display: inline-block;
@@ -37,10 +67,11 @@ padding: 20px 0;
 }
 
 
-#tech-wrapper {background-color: #f4a543;}
+#tech-wrapper {background-color: #fff;}
 #entertainment-wrapper {background-color: #4CAF50;}
 #edu-wrapper {background-color: #F44336;}
 #social-media-wrapper {background-color: #e5f0f6;}
+
 
 
 #technologies {height: 50px; max-width: 600px;}
@@ -170,8 +201,9 @@ a {color: inherit;}
 .logo-row img {margin: 0 2px;}
 }
 </style>
+
+<!-- Maps Module -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        
         <script type="text/javascript">
 		var map;
 		var mainCenter = new google.maps.LatLng(22.125254, 64.783432);
@@ -278,21 +310,14 @@ a[href^="https://maps.google.com/maps"], a[href^="http://maps.google.com/maps"]{
 </style>
 </head>
 <body>
-<div id="v2-content">
-        <div id="map"></div>
-<div id="profpicwrap">
-<div id="profpicbox">
-
-<div id="prof" style=""></div>
-<a id="profname" style="">Sourabh Shetty</a>
-</a>
-</div>
-</div>
-
-
+<header>
+	<div class="title-block">
+		<div class="title">Sourabh Shetty</div>
+		<div class="subtitle">I write code and pontificate about TV shows.</div>
+    </div>
+</header>
 
 <section id="tech-wrapper" class="section">
-		<h3>Technologies Worked With</h3>
 		<div id="technologies" class="logo-row">
 			<div class="known">
 				<a href="#">
@@ -364,20 +389,7 @@ a[href^="https://maps.google.com/maps"], a[href^="http://maps.google.com/maps"]{
 		</div>
 </section>
 
-<section id="entertainment-wrapper" class="section">
-		<div id="entertainment" class="logo-row">
-			<div class="known"><a href="list/movie/">
-				<h2>Movies</h2>
-				<h3>800+</h3></a>
-			</div>
-			<div class="known"><a href="list/tv/">
-				<h2>TV Shows</h2>
-				<h3>300+</h3></a>
-			</div>
-		</div>
-</section>
 <section id="edu-wrapper" class="section">
-		<h3>Education</h3>
 		<div id="education" class="logo-row">
 			<div class="known">
 				<a href="#">
@@ -431,9 +443,10 @@ a[href^="https://maps.google.com/maps"], a[href^="http://maps.google.com/maps"]{
 			</div>
 		</div>
 </section>
+
+        <div id="map"></div>
 <footer>
 Copyright &copy; 2015 Sourabh Shetty
 </footer>
-</div>
 </body>
 </html>
