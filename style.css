@@ -53,16 +53,17 @@ header {
 }
 .panel .left .icon {
     background-size: cover;
-    margin: 0 auto;
+    margin: 10px auto;
+	margin-left: 20px;
 }
 .movie-panel .icon {
-    height: 56px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     background-image: url('list/images/movie.png');
 }
 .mapster-panel .icon {
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     background-image: url('images/mapster.png');
 }
 .resume-panel .icon {
@@ -111,18 +112,27 @@ header {
         width: 100%;
     }
     .panel {
-        width: 90%;
     }
     .content {
         margin: 0 auto;
         padding: 0;
+		min-width: 0;
         width: 80%;
     }
     .panel {
+        width: 90%;
         float: none;
-        margin-top: 10px auto;
+        margin: 10px auto;
         border-radius: 4px;
         min-height: 90px;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
     }
+}
+@media screen and (max-width: 460px) {
+    .left {
+		display: none;
+	}
+	.panel h3 {
+		text-align: center;
+	}
 }

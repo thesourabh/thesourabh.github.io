@@ -131,15 +131,8 @@ header {
 #scripts {
     background-color: #e5e5e5;
 }
-@media screen and (max-width: 1063px) {
-    #cardshare h1 {
-        font-size: 8vw;
-    }
-}
-@media screen and (max-width: 900px) {
-    #scripts h1 {
-        font-size: 8vw;
-    }
+#map-project {
+    background-color: #ffffff;
 }
 .project-text,
 .project-video,
@@ -206,7 +199,10 @@ header {
 	width: 300px;
     max-width: 40%;
 }
-@media screen and (max-width: 716px) {
+
+
+
+@media screen and (max-width: 716px) and (max-height: 600px) {
     .project:not(#argus):not(#map-project) {
         min-height: 660px;
         height: 200%;
@@ -241,6 +237,41 @@ header {
         -moz-transform: translateY(-33%);
     }
 }
+@media screen and (max-width: 716px) {
+    .project:not(#argus):not(#map-project) {
+        min-height: 600px;
+        height: 100%;
+    }
+    .project:not(#argus) .project-text,
+    .project:not(#argus) .project-video,
+    .project:not(#argus) .project-image,
+    .project:not(#argus) .project-list {
+        width: 80%!important;
+        max-width: 80%!important;
+        left: 0!important;
+        right: 0!important;
+        margin: auto!important;
+    }
+    .project:not(#argus) .project-list {
+        width: 50%!important;
+    }
+    .project:not(#argus):not(#map-project) .project-text {
+        top: 30%;
+        transform: translateY(-70%);
+        -webkit-transform: translateY(-70%);
+        -o-transform: translateY(-70%);
+        -moz-transform: translateY(-70%);
+    }
+    .project:not(#argus) .project-video,
+    .project:not(#argus) .project-image,
+    .project:not(#argus) .project-list {
+        top: 65%;
+        transform: translateY(-33%);
+        -webkit-transform: translateY(-33%);
+        -o-transform: translateY(-33%);
+        -moz-transform: translateY(-33%);
+    }
+}
 @media screen and (max-width: 600px) {
     #argus-text {
         position: absolute;
@@ -249,6 +280,26 @@ header {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+@media screen and (max-width: 602px) {
+    #spark h1 {
+        font-size: 8vw;
+    }
+}
+@media screen and (max-width: 1063px) {
+    #cardshare h1 {
+        font-size: 8vw;
+    }
+}
+@media screen and (max-width: 900px) {
+    #scripts h1 {
+        font-size: 8vw;
+    }
+}
+@media screen and (max-width: 480px) {
+    #map-project h1 {
+        font-size: 8vw;
     }
 }
 .project-text h1 {
