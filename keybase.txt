@@ -21,7 +21,7 @@ To do so, I am signing this object:
             "username": "sourabh"
         },
         "service": {
-            "hostname": "sourabhshetty.me",
+            "hostname": "sourabh.io",
             "protocol": "http:"
         },
         "type": "web_service_binding",
