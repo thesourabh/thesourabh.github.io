@@ -93,9 +93,8 @@ header,
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
-.overlay .fp-tableCell:after {
+.overlay .fp-tableCell:before {
     content: '\A';
-	z-index: -100;
     position: absolute;
     width: 100%; height:100%;
     top:0; left:0;
