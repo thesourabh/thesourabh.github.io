@@ -6,18 +6,110 @@
 <meta name="author" content="Sourabh Shetty">
 <link rel="author" href="https://plus.google.com/116689635100187719735" />
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
-<style>
-body, html { width:100% ;
-    height:100% ;
-    overflow:hidden ;
-	margin: 0;
+<script src="https://dl.dropboxusercontent.com/s/8zebi3wya4ifiiq/tv.js"></script>
+<style type="text/css">
+*{padding: 0;margin: 0;}
+body
+{
+background: #111;
+font-family: Calibri;
+color: #aaa;
+font-size: 13px;
 }
-iframe { width:100% ;
-        height:100% ;
-    border:none ;
+.header{margin-left: 20px;}
+#count-disp{text-align: center;margin: 10px 0;}
+#full-list
+{
+margin-top: 10px;
+font-size:10pt;
 }
+.title
+{
+margin-top: 40px;
+text-align: center;
+}
+h1{
+font-size: 27px;
+font-weight: normal;
+font-family: Calibri;
+}
+.notes
+{
+font-size:9pt;
+margin-left: 19px;
+}
+a
+{
+cursor: pointer;
+color:  #CD9B1D;
+font-size: 14px;
+text-decoration: none;
+}
+.content{margin-left: 30px;}
+span{display: block;}
+pre{
+font-family: Calibri;
+line-height: 1;
+margin: 10px;
+display: none;
+}
+.footer{text-align: center;}
 </style>
 </head>
 <body>
-<iframe src="https://dl.dropboxusercontent.com/u/20189467/TV%20Shows%20List.html"></iframe>
-</body></html>
+	<div class="header">
+		<div class="title"><h1>TV Shows Watched From 2008 - 2016</h1></div>
+		<a href="http://sourabh.io/list/">Back to main page</a>
+		<div id="count-disp">Calculating count. Hold on a second.</div>
+	</div>
+	<div class="content">
+		<a onclick="toggleSeasons()" id="toggle-seasons">Click here to expand Seasons</a>
+		<div id="full-list">
+		</div>
+	</div>
+	<div class="footer">
+		Copyright &copy; 2008-2016 Sourabh Shetty. All Rights Reserved.
+	</div>
+	
+<script = "text/javascript">
+var showCount = tv.length;
+var seasonCount = 0;
+
+var oShowDOM = "";
+tv.forEach(function (oShow) {
+	seasonCount += oShow.seasons.length;
+	var sSeasons = "";
+	oShow.seasons.forEach(function (sSeason) {sSeasons += sSeason + "\n"});
+	oShowDOM += "<span>" + oShow.name + "<pre>" + sSeasons + "</pre></span>";
+});
+
+
+var text="Current Count: "+showCount+" TV Shows, " + seasonCount + " total seasons. An average of " + (seasonCount/showCount).toFixed(3) + " seasons per show.";
+document.getElementById("count-disp").innerHTML = text;
+document.getElementById("full-list").innerHTML = oShowDOM;
+
+function toggleSeasons()
+{
+if(document.getElementById("toggle-seasons").innerHTML=="Click here to expand Seasons")
+{
+	tags = document.getElementById("full-list").getElementsByTagName("pre");
+    total = tags.length;
+	for ( var i = 0; i < total; i++ ) {
+	  tags[i].style.display = 'block';
+	}
+	document.getElementById("toggle-seasons").innerHTML="Click here to collapse Seasons";
+}
+else if (document.getElementById("toggle-seasons").innerHTML=="Click here to collapse Seasons")
+{
+	tags = document.getElementById("full-list").getElementsByTagName("pre");
+    total = tags.length;
+	for ( var i = 0; i < total; i++ ) {
+	  tags[i].style.display = 'none';
+	}
+	document.getElementById("toggle-seasons").innerHTML="Click here to expand Seasons";
+}
+}
+
+</script>
+</body>
+</html>
