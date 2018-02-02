@@ -26,7 +26,7 @@ html, body {
   font-weight: 100;
 }
 .header-block .nav {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .header-block .nav .nav-item{
   font-size: 28px;
@@ -46,27 +46,14 @@ html, body {
   border-right: none;
 }
 
-.header.compressed {
-  height: 50px;
-  position: fixed;
+.social-media {
+	margin-top: 15px;
 }
-.header.compressed .header-block{
+.social-media-item img {
+	width: 30px;
+	height: 30px;
+	margin: 0 10px;
 }
-.header.compressed h1{
-  font-size: 24px;
-}
-.header.compressed h2{
-  display: none;
-}
-
-.section {
-	display: inline-block;
-	width: calc(50% - 2px);
-	height: 100%;
-}
-.left-section  {
-	background-color: #fff;
-}
-.right-section  {
-	background-color: #212F3C;
+.social-media-item:hover img {
+	opacity: 0.7;
 }
