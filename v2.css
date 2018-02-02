@@ -14,10 +14,12 @@ html, body {
   position: relative;
 }
 .header-block {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    margin: 0 auto;
 }
 .header-block h1 {
   font-size: 62px;
@@ -30,7 +32,7 @@ html, body {
 }
 .header-block .nav .nav-item{
   font-size: 28px;
-  color: #666;
+  color: #555;
   letter-spacing: 2px;
   font-family: Open Sans;
   font-weight: 100;
@@ -56,4 +58,21 @@ html, body {
 }
 .social-media-item:hover img {
 	opacity: 0.7;
+}
+
+
+@media (max-width: 500px) {
+	.header-block {
+		width: 90%;
+	}
+	.header-block h1 {
+		font-size: 44px;
+	}
+	.header-block .nav .nav-item {
+		font-size: 18px;
+	}
+	.social-media-item img {
+		margin: 0 3px;
+	}
+	
 }
