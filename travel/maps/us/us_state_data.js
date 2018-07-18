@@ -1,54 +1,63 @@
 var states = {
 	AL: {
 		name: "Alabama",
-		dateVisited: "2018-03-05"
+		visited: "2018-03-05",
+		description: "Huntsville and US Space and Rocket Center"
 	},
 	DC2: {
 		name: "Washington, District of Columbia",
-		dateVisited: "2017-09-28"
+		visited: "2017-09-28",
+		description: "Interview and later summer internship"
 	},
 	LA: {
 		name: "Louisiana",
-		dateVisited: "2018-03-06"
+		visited: "2018-03-06",
+    description: "New Orleans / Spring Break"
 	},
 	MD: {
 		name: "Maryland",
-		dateVisited: "2018-07-06"
+		passed: "2018-07-06"
 	},
 	MS: {
 		name: "Mississippi",
-		dateVisited: "2018-03-07"
+		visited: "2018-03-07",
+    description: "Biloxi Beach"
 	},
 	NC: {
 		name: "North Carolina",
-		dateVisited: "2017-03-10"
+		passed: "2017-03-10"
 	},
 	NJ: {
 		name: "New Jersey",
-		dateVisited: "2017-12-27"
+		passed: "2017-12-27"
 	},
 	NY: {
 		name: "New York",
-		dateVisited: "2017-12-22"
+		visited: "2017-12-22",
+    description: "Winter break trip"
 	},
 	PA: {
 		name: "Pennsylvania",
-		dateVisited: "2018-07-07"
+		visited: "2018-07-07",
+    description: "Weekend visiting Tegie"
 	},
 	SC: {
 		name: "South Carolina",
-		dateVisited: "2018-03-10"
+		visited: "2018-03-10",
+    description: "Myrtle Beach"
 	},
 	TN: {
 		name: "Tennessee",
-		dateVisited: "2018-03-04"
+		visited: "2018-03-04",
+    description: "Nashville"
 	},
 	VA: {
 		name: "Virginia",
-		dateVisited: "2017-08-17"
+		visited: "2017-08-17",
+    description: "School. First point of entry."
 	},
 	WV: {
 		name: "West Virginia",
-		dateVisited: "2017-12-27"
+		passed: "2017-12-27"
 	}
 }

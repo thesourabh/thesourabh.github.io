@@ -1,23 +1,25 @@
 <!doctype html>
 <html>
 <head>
-    <title>US Map</title>
+    <title>US Visited States Map | Sourabh Shetty</title>
     <style>
         body {
             font-family: Arial, sans-serif;
         }
+
         h1 {
             text-align: center;
         }
+
         path, circle {
             cursor: pointer;
         }
 
-        #AL, #DC2, #LA, #MS, #NY, #PA, #SC, #TN, #VA {
+        .visited {
             fill: red;
         }
 
-        #MD, #NC, #NJ, #WV {
+        .passed {
             fill: green;
         }
 
@@ -29,6 +31,7 @@
             transform: translateX(-50%);
             width: 70%;
             max-width: 959px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
 
         #info-box {
@@ -172,30 +175,49 @@
     </svg>
 </div>
 <div id="info-box"></div>
-<script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="us_state_data.js"></script>
 <script>
+  // Storing them so that they don't have to be fetched repeatedly
+  let stateDoms = $("path, circle"),
+    infoBoxDom = $('#info-box');
 
-  $("path, circle").hover(function (e) {
-    var stateId = e.target.id,
-      state = states[stateId] || {},
-      infoBoxData = "";
-    infoBoxData += (state.name || stateId);
-    if (state.dateVisited) {
-      infoBoxData += "<br>" + state.dateVisited;
+  // If any of the state IDs match those in our file, apply the relevant CSS class
+  $.each(stateDoms, function (key, value) {
+    if (value.id in states) {
+      let state = states[value.id];
+      if (state.visited) {
+        value.classList.add("visited");
+      } else if (state.passed) {
+        value.classList.add("passed");
+      }
     }
-    $('#info-box').css('display', 'block');
-    $('#info-box').html(infoBoxData);
   });
-  $("path, circle").mouseleave(function (e) {
-    $('#info-box').css('display', 'none');
+
+  // On hover, show in the info box with info for the state
+  stateDoms.hover(function (e) {
+    let stateId = e.target.id,
+      state = states[stateId] || {},
+      infoBoxData = "",
+      dateToDisplay = state.visited || state.passed;
+    infoBoxData += (state.name || stateId);
+    if (dateToDisplay) {
+      infoBoxData += "<br>" + dateToDisplay;
+    }
+    if (state.description) {
+      infoBoxData += "<br>" + state.description;
+    }
+    infoBoxDom.css('display', 'block');
+    infoBoxDom.html(infoBoxData);
   });
+
+  stateDoms.mouseleave(function (e) {
+    infoBoxDom.css('display', 'none');
+  });
+
   $(document).mousemove(function (e) {
-    $('#info-box').css('top', e.pageY - $('#info-box').height() - 30);
-    $('#info-box').css('left', e.pageX - ($('#info-box').width()) / 2);
+    infoBoxDom.css('top', e.pageY - infoBoxDom.height() - 30);
+    infoBoxDom.css('left', e.pageX - (infoBoxDom.width()) / 2);
   }).mouseover();
 </script>
 </body>
