@@ -23,7 +23,7 @@
             fill: green;
         }
 
-        #us-map {
+        #map {
             display: block;
             position: absolute;
             top: 100px;
@@ -52,7 +52,7 @@
 <h1>US States Visited</h1>
 <div id="mapdiv">
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-    <svg id="us-map" preserveAspectRatio="xMinYMin meet" viewBox="0 0 959 593">
+    <svg id="map" preserveAspectRatio="xMinYMin meet" viewBox="0 0 959 593">
         <g id="outlines">
             <path id="AK"
                   fill="#D3D3D3"
@@ -176,7 +176,7 @@
 </div>
 <div id="info-box"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="us_state_data.js"></script>
+<script src="state_data.js"></script>
 <script>
   // Storing them so that they don't have to be fetched repeatedly
   let stateDoms = $("path, circle"),
