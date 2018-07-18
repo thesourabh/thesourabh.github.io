@@ -1,46 +1,49 @@
 var states = {
 	AP: {
 		name: "Andhra Pradesh",
-		visited: " "
+		visited: "2012",
+		description: "Tirupati"
 	},
 	DL: {
 		name: "New Delhi",
-		passed: " "
+		passed: ""
 	},
 	GA: {
 		name: "Goa",
-		passed: " "
+		passed: ""
 	},
 	GJ: {
 		name: "Gujarat",
-		passed: " "
+		passed: ""
 	},
 	HP: {
-		name: "Gujarat",
-    visited: " "
+		name: "Himachal Pradesh",
+    visited: "2007",
+    description: "School trip to Manali / Diwali break"
 	},
 	HR: {
-		name: "Gujarat",
-		passed: " "
+		name: "Haryana",
+		passed: ""
 	},
 	KA: {
 		name: "Karnataka",
-		visited: " "
+		visited: "",
+		description: "Udupi, Mangalore, Bangalore, etc"
 	},
 	MH: {
 		name: "Maharashtra",
-		visited: " "
+		visited: "Pune and Mumbai"
 	},
 	MP: {
 		name: "Madhya Pradesh",
-		passed: " "
+		passed: ""
 	},
 	PB: {
-		name: "Madhya Pradesh",
-		passed: " "
+		name: "Punjab",
+		passed: ""
 	},
 	UP: {
 		name: "Uttar Pradesh",
-		passed: " "
+		passed: ""
 	},
 }
