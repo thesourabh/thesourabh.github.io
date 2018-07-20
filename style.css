@@ -60,6 +60,16 @@ html, body {
 	opacity: 0.7;
 }
 
+.extras-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    background: url("images/icons/bw/extras.png");
+    background-size: cover;
+}
+
 
 @media (max-width: 500px) {
 	.header-block {
