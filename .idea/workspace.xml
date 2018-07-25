@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb0d627-ef6c-454c-8577-886132d46b29" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/travel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/maps/us/state_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/travel/maps/us/state_data.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="358">
@@ -45,6 +43,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="state_data.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/travel/maps/us/state_data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -56,6 +63,7 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/extras/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/travel/maps/us/state_data.js" />
       </list>
     </option>
   </component>
@@ -88,6 +96,24 @@
               <item name="thesourabh.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="thesourabh.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="extras" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thesourabh.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thesourabh.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="travel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thesourabh.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thesourabh.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="travel" type="462c0819:PsiDirectoryNode" />
+              <item name="maps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thesourabh.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thesourabh.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="travel" type="462c0819:PsiDirectoryNode" />
+              <item name="maps" type="462c0819:PsiDirectoryNode" />
+              <item name="us" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -127,12 +153,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532060108766</updated>
-      <workItem from="1532060109911" duration="444000" />
+      <workItem from="1532060109911" duration="1209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="444000" />
+    <option name="totallyTimeSpent" value="1209000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -171,6 +197,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/extras/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -178,10 +211,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/travel/maps/us/state_data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="341">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -29,7 +29,9 @@ var states = {
 	},
 	NJ: {
 		name: "New Jersey",
-		passed: "2017-12-27"
+    visited: "2018-07-21",
+		passed: "2017-12-27",
+		description: "New Brunswick"
 	},
 	NY: {
 		name: "New York",
