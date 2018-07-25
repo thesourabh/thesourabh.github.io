@@ -4,7 +4,7 @@ https://keybase.io/sourabh
 
 I hereby claim:
 
-  * I am an admin of http://sourabh.io
+  * I am an admin of https://sourabh.io
   * I am sourabh (https://keybase.io/sourabh) on keybase.
   * I have a public key with fingerprint 98B6 D6D1 CC8C 0926 D3C0  BE01 BFDC F023 5B81 F426
 
