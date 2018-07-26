@@ -14,6 +14,39 @@ $.each(stateDoms, function (key, value) {
   }
 });
 
+/*
+let dateMap = {};
+$.each(states, function (stateId, state) {
+  if ('passed' in state) {
+    if (state['passed'] in dateMap) {
+      dateMap[state['passed']].push(stateId + '-passed');
+    } else {
+      dateMap[state['passed']] = [stateId + '-passed'];
+    }
+  } else if ('visited' in state) {
+    if (state['visited'] in dateMap) {
+      dateMap[state['visited']].push(stateId + '-visited');
+    } else {
+      dateMap[state['visited']] = [stateId + '-visited'];
+    }
+  }
+});
+
+let sortedDates = Object.keys(dateMap).sort();
+console.log(sortedDates);
+$.each(sortedDates, function (index, date) {
+  var eventsOnDate = dateMap[date];
+  setTimeout(function () {
+    $.each(eventsOnDate, function (indexx, stateEvent) {
+      var stateAndEvent = stateEvent.split("-");
+      var stateDOM = $('#' + stateAndEvent[0])[0];
+      stateDOM.classList = [stateAndEvent[1]];
+      console.log(stateAndEvent[0] + stateDOM.classList);
+    });
+  }, 500 * index);
+});
+*/
+
 // On hover, show in the info box with info for the state
 stateDoms.hover(function (e) {
   let stateId = e.target.id,

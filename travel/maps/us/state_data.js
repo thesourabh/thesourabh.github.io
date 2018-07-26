@@ -20,17 +20,18 @@ var states = {
 	},
 	MS: {
 		name: "Mississippi",
+		passed: "2018-03-05",
 		visited: "2018-03-07",
     description: "Biloxi Beach"
 	},
 	NC: {
 		name: "North Carolina",
-		passed: "2017-03-10"
+		passed: "2018-03-10"
 	},
 	NJ: {
 		name: "New Jersey",
+    passed: "2017-12-27",
     visited: "2018-07-21",
-		passed: "2017-12-27",
 		description: "New Brunswick"
 	},
 	NY: {
@@ -40,6 +41,7 @@ var states = {
 	},
 	PA: {
 		name: "Pennsylvania",
+		passed: "2017-12-27",
 		visited: "2018-07-07",
     description: "Weekend visiting Tegie"
 	},
