@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efb0d627-ef6c-454c-8577-886132d46b29" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/list/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/list/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/maps/common/map_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/travel/maps/common/map_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/maps/us/state_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/travel/maps/us/state_data.js" afterDir="false" />
-    </list>
+    <list default="true" id="efb0d627-ef6c-454c-8577-886132d46b29" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -48,8 +44,8 @@
       <file leaf-file-name="map_script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/travel/maps/common/map_script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="425">
+              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -101,7 +97,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="535" />
     <option name="y" value="-10" />
     <option name="width" value="1400" />
@@ -199,15 +195,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532060108766</updated>
-      <workItem from="1532060109911" duration="6564000" />
+      <workItem from="1532060109911" duration="8960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6564000" />
+    <option name="totallyTimeSpent" value="8960000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
@@ -288,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/travel/maps/common/map_script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="425">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
         </state>
       </provider>
     </entry>
