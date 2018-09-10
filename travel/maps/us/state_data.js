@@ -4,11 +4,15 @@ var states = {
 		visited: "2018-03-05",
 		description: "Huntsville and US Space and Rocket Center"
 	},
-	DC2: {
-		name: "Washington, District of Columbia",
-		visited: "2017-09-28",
-		description: "Interview and later summer internship"
-	},
+  DC2: {
+    name: "Washington, District of Columbia",
+    visited: "2017-09-28",
+    description: "Interview and later summer internship"
+  },
+  DE: {
+    name: "Delaware",
+    passed: "2017-12-22"
+  },
 	LA: {
 		name: "Louisiana",
 		visited: "2018-03-06",
@@ -16,7 +20,9 @@ var states = {
 	},
 	MD: {
 		name: "Maryland",
-		passed: "2018-07-06"
+		passed: "2018-07-06",
+		visited: "2018-08-13",
+		description: "University of Maryland, College Park"
 	},
 	MS: {
 		name: "Mississippi",
@@ -26,7 +32,9 @@ var states = {
 	},
 	NC: {
 		name: "North Carolina",
-		passed: "2018-03-10"
+		passed: "2018-03-10",
+		visited: "2018-08-18",
+		description: "Asheville on the way to Smokey Mountains"
 	},
 	NJ: {
 		name: "New Jersey",
