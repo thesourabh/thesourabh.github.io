@@ -8,231 +8,123 @@
     <meta name="author" content="Sourabh Shetty">
     <link rel="author" href="https://plus.google.com/116689635100187719735" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.7/jquery.fullPage.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link href="projects.css" rel="stylesheet">
-    <!-- Maps Module -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript">
-        var map;
-        var mainCenter = new google.maps.LatLng(22.125254, 64.783432);
-        //  "color": "#703030"
-        var landColor = "#703030";
-        var seaColor = "#1f242b";
-
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                zoom: 4,
-                // The latitude and longitude to center the map (always required)
-                center: mainCenter, // Pune, Dubai midpoint
-                disableDefaultUI: true,
-                scrollwheel: false,
-                navigationControl: false,
-                mapTypeControl: false,
-                scaleControl: false,
-                draggable: false,
-                disableDoubleClickZoom: true,
-                // How you would like to style the map. 
-                styles: [{
-                    "stylers": [{
-                        "visibility": "off"
-                    }]
-                }, {
-                    "featureType": "water",
-                    "stylers": [{
-                        "visibility": "on"
-                    }, {
-                        "color": seaColor
-                    }]
-                }, {
-                    "featureType": "landscape",
-                    "stylers": [{
-                        "visibility": "on"
-                    }, {
-                        "color": landColor
-                    }]
-                }, {
-                    "featureType": "administrative",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{
-                        "visibility": "off"
-                    }, {
-                        "color": "#2f343b"
-                    }, {
-                        "weight": 1
-                    }]
-                }]
-            };
-
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('map');
-
-            // Create the Google Map using our element and options defined above
-            map = new google.maps.Map(mapElement, mapOptions);
-
-            // Let's also add a marker while we're at it
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(18.5203, 73.8567),
-                map: map,
-                title: 'Pune'
-            });
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(25.2048, 55.2708),
-                map: map,
-                title: 'Dubai'
-            });
-
-        }
-
-
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-
-        google.maps.event.addDomListener(window, "resize", function() {
-            var center = map.getCenter();
-            google.maps.event.trigger(map, 'resize');
-            map.setCenter(center);
-        });
     </script>
 </head>
 
 <body>
-<div id="fullpage">
-    <header class="project" data-tooltip="Home">
-        <div class="title-block">
-            <div class="subtitle">Projects Made By</div>
-            <div class="title">Sourabh Shetty</div>
-        </div>
-    </header>
-    <div id="argus" class="project overlay" data-tooltip="Argus">
-        <div id="argus-text" class="project-text">
-            <h1>Argus</h1>
-            <h3>An Android app to secure your desktop</h3>
-            <a href="https://github.com/thesourabh/argus" class="download-now">SEE CODE</a>
-        </div>
-    </div>
-    <div id="mapster" class="project" data-tooltip="Mapster">
-        <div id="mapster-text" class="project-text">
-            <h1>Mapster</h1>
-            <h3>Find Instagram pictures posted anywhere in the world by clicking on a map</h3>
-            <a href="https://github.com/thesourabh/Mapster" class="download-now">SEE CODE</a>
-        </div>
-        <iframe id="mapster-video" class="project-video" width="560" height="315" src="https://www.youtube.com/embed/P_ouYTodgQI" frameborder="0" allowfullscreen> </iframe>
-    </div>
-    <div id="scrcrw" class="project overlay" data-tooltip="scrcrw">
-        <div id="scrcrw-text" class="project-text">
-            <h1>scrcrw</h1>
-            <h3>Website redesign</h3>
-            <!-- <a href="http://www.scrcrw.com/" class="download-now">SEE MORE</a> -->
-        </div>
-        <div class="browser-mockup project-image" id="scrcrw-image">
-			<a href="img/screens/full/scrcrw.png">
-				<img src="img/screens/scrcrw.jpg" />
-			</a>
+
+<header>
+    <h1>Sourabh Shetty</h1>
+    <h2>Projects</h2>
+</header>
+
+<div class="projects">
+
+
+    <div class="project overlay" data-tooltip="16 Squares of Blacksburg">
+        <div class="project-text">
+            <h3>16 Squares of Blacksburg</h3>
+            <h4>An augmented reality application built on Unity using the Vuforia SDK and written in C#, visualizing the history of the city of Blacksburg and
+                incorporating a variety of interaction techniques.</h4>
+            <a href="https://github.com/thesourabh/16-Squares" class="download-now">Code</a>
         </div>
     </div>
-    <div id="spark" class="project overlay" data-tooltip="Spark Cinema">
-        <div id="spark-text" class="project-text">
-            <h1>Spark Cinema</h1>
-            <h3>Website development for college course</h3>
-            <a href="https://github.com/thesourabh/spark-cinema" class="download-now">SEE MORE</a>
-        </div>
-        <div class="browser-mockup project-image" id="spark-image">
-			<a href="img/screens/full/spark.png">
-				<img src="img/screens/spark.jpg" />
-			</a>
+    <div class="project overlay" data-tooltip="Panacea">
+        <div class="project-text">
+            <h3>Panacea</h3>
+            <h4>An Eclipse plugin written in Java that automatically detects insecure code and security-related bugs in a project and suggests fixes for them.
+            </h4>
+                <a href="https://github.com/thesourabh/Panacea" class="download-now">Code</a>
         </div>
     </div>
-    <div id="cardshare" class="project overlay" data-tooltip="Cardshare">
-        <div id="cardshare-text" class="project-text">
-            <h1>CardShare</h1>
-            <h3>Contact sharing application made entirely in Visual Basic 6 for a college course</h3>
-            <!-- <a href="#" class="download-now">FIND OUT MORE</a> -->
-        </div>
-		<img src="img/screens/cardshare.jpg" class="project-image" id="cardshare-image" />
-		
-    </div>
-    <div id="scripts" class="project overlay" data-tooltip="Scripts / Others">
-        <div id="scripts-text" class="project-text">
-            <h1>Scripts & Other Projects</h1>
-            <h3>Smaller scripts, projects for personal use, and shelved projects</h3>
-            <a href="https://github.com/thesourabh" class="download-now">FIND OUT MORE</a>
-        </div>
-        <div id="scripts-list" class="project-list">
-            <ul>
-                <li>Locagram</li>
-                <li>TV Canary</li>
-                <li>Monitor+</li>
-                <li>Gfycat Bulk Uploader</li>
-                <li>University Result Scraper / Rank List Generator</li>
-                <li>IMDb Scraper</li>
-            </ul>
+    <div class="project overlay" data-tooltip="Argus">
+        <div class="project-text">
+            <h3>Argus</h3>
+            <h4>An Android application written in Java for remotely monitoring and securing a desktop. Includes the ability to remotely lock or shutdown a computer, restrict
+                USB access, get screenshots of what the potential perpetrator is doing on the system, and taking a picture of the perpetrator using the system’s webcam.</h4>
+            <a href="https://github.com/thesourabh/argus" class="download-now">Code</a>
         </div>
     </div>
-    <div id="map-project" class="project" data-tooltip="Location">
-	<!--
-        <div style="width: 100%; height: 100%; background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=22.125254,+64.783432&zoom=5&size=640x540&&sensor=false&scale=4&style=feature:all%7cvisibility:off&style=feature:landscape%7cvisibility:on%7ccolor:0x703030&style=feature:water%7cvisibility:on%7ccolor:0x1f242b'); background-position: center;"></div>
-		-->
-		<div id="map"></div>
-        <div id="map-text" class="project-text">
-            <h1>Currently Available</h1>
-            <h3>In these locations</h3>
+    <div class="project" data-tooltip="Mapster">
+        <div class="project-text">
+            <h3>Mapster / Locus for Instagram</h3>
+            <h4>An Android & web application to find Instagram pictures posted near your current location or anywhere in the world by clicking on a map. Technologies
+                used: Java, the Android SDK, its location APIs, the Instagram REST API, HTML, CSS (with Bootstrap), JavaScript (with Jquery), PHP and SQL.
+            </h4>
+            <a href="https://github.com/thesourabh/Mapster" class="download-now">Code</a>
+            <a href="https://www.youtube.com/watch?v=P_ouYTodgQI" class="download-now">Video</a>
         </div>
     </div>
-    <div class="footer">
-        Copyright &copy; 2015 Sourabh Shetty
+    <div class="project overlay" data-tooltip="Gfycat Bulk Uploader">
+        <div class="project-text">
+            <h3>Gfycat Bulk Uploader</h3>
+            <h4>Batch upload GIFs to gfycat and download the converted MP4s automatically.
+            </h4>
+            <a href="https://github.com/thesourabh/gfycat-bulk" class="download-now">Code</a>
+        </div>
+    </div>
+    <div class="project overlay" data-tooltip="Crusader Kings 2 Family Tree Generator">
+        <div class="project-text">
+            <h3>Crusader Kings 2 Family Tree Generator</h3>
+            <h4>Parses a Crusader Kings 2 (*.ck2) savefile and generates a text family tree in HTML</h4>
+            <a href="https://github.com/thesourabh/ck2-family-tree-generator" class="download-now">Code</a>
+        </div>
+    </div>
+    <div class="project overlay" data-tooltip="OEM Info Editor">
+        <div class="project-text">
+            <h3>OEM Info Editor</h3>
+            <h4>A portable tool built using C# in Visual Studio to allow users to add and/or edit fields in the Windows System properties view.
+            </h4>
+            <a href="https://github.com/thesourabh/OEM-Info-Editor" class="download-now">Code</a>
+        </div>
+    </div>
+    <div class="project overlay" data-tooltip="SEC Litigation Releases">
+        <div class="project-text">
+            <h3>SEC Litigation Releases</h3>
+            <h4>Goes through the SEC website and identifies cases associated with insider trading, and downloads the case as well as the PDF complaint if it is available.
+            </h4>
+            <a href="https://github.com/thesourabh/SEC-Litigation-Releases" class="download-now">Code</a>
+        </div>
+    </div>
+    <div class="project overlay" data-tooltip="Wikidump XML Most Edited">
+        <div class="project-text">
+            <h3>Wikidump XML Most Edited</h3>
+            <h4>Written to parse a 100GB Wikidump XML file and find the most edited article in a given time span.
+            </h4>
+            <a href="https://github.com/thesourabh/wikidump-xml-most-edited" class="download-now">Code</a>
+        </div>
+    </div>
+    <div class="project overlay" data-tooltip="University Results Scraper / Rank List Generator ">
+        <div class="project-text">
+            <h3>University Results Scraper / Rank List Generator</h3>
+            <h4>Reads in results unclean data for the entire university and spits out the relevant rank list</h4>
+            <a href="https://github.com/thesourabh/marks-sorter-unipune" class="download-now">Code</a>
+        </div>
+    </div>
+    <div class="project overlay" data-tooltip="SCRCRW">
+        <div class="project-text">
+            <h3>SCRCRW</h3>
+            <h4>Redesign for popular skateboarding website</h4>
+            <a href="img/screens/scrcrw.jpg" class="download-now">Screenshot</a>
+        </div>
+    </div>
+    <div class="project overlay" data-tooltip="Cardshare">
+        <div class="project-text">
+            <h3>CardShare</h3>
+            <h4>Contact sharing application made entirely in Visual Basic 6 for a college course</h4>
+            <a href="img/screens/cardshare.jpg" class="download-now">Screenshot</a>
+        </div>
     </div>
 </div>
+
+<div class="footer">
+    Copyright &copy; 2015 Sourabh Shetty
+</div>
 	<script>
-$(document).ready(function() {
-	
-	var tooltips = $('.project').map( function() {
-		var tooltip = $(this).data('tooltip');
-		if (!tooltip) tooltip = "";
-		return(tooltip)
-		}).get();
-    $('#fullpage').fullpage({
-        //Navigation
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: tooltips,
-        showActiveTooltip: false,
-        //Scrolling
-        css3: true,
-        scrollingSpeed: 700,
-        autoScrolling: true,
-        fitToSection: true,
-        scrollBar: true,
-        easing: 'easeInOutCubic',
-        easingcss3: 'ease',
-        normalScrollElements: '.footer',
-        scrollOverflow: false,
-        touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
-
-        //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-
-        //Design
-        controlArrows: true,
-        verticalCentered: true,
-        resize : false,
-        responsiveWidth: 0,
-        responsiveHeight: 0,
-
-        //Custom selectors
-        sectionSelector: '.project',
-        slideSelector: '.slide'
-    });
-});
 	
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
