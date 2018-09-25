@@ -48,3 +48,7 @@ header h2 {
     font-weight: normal;
     font-size: 9pt;
 }
+.footer {
+    text-align: center;
+    font-size: 8pt;
+}
