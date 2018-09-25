@@ -86,7 +86,7 @@
         effectively generate and send as much data as it wants through the circuit, ignoring all the size limits. On the
         controlled destination server end, it can stop reading from the TCP connection, forcing the target exit relay to
         buffer the data, until it runs out of memory and crashes the application.</p>
-    <h3>3. Efficient Attack</h3>
+    <h3>3. The Efficient Attack</h3>
     <p>While the previous two attacks are effective, they are not very efficient. There are two reasons for this.<br>
     <ul>
         <li>Since the attacker has to generate the data themselves, the consumed bandwidth is equal to the amount
@@ -96,19 +96,103 @@
     </ul>
     The final proposed attack deals with both of these issues.<br>
     <p>In this attack, the attacker only has control of the client. The circuit is first created with the victim entry
-    relay. The client then sends a request via the circuit towards the exit relay to fetch a large file. The exit relay
-    starts sending the requested data back, at which point the client stops reading from the TCP connection with the
-    entry relay. This triggers the relays's buffering mechanism and the relay buffers 1000 cells.<br>
+        relay. The client then sends a request via the circuit towards the exit relay to fetch a large file. The exit
+        relay
+        starts sending the requested data back, at which point the client stops reading from the TCP connection with the
+        entry relay. This triggers the relays's buffering mechanism and the relay buffers 1000 cells.<br>
     <p>
-    Now, the client has to effectively trick the exit relay into sending more data. It can accomplish this by sending a
-    SENDME cell to the exit. This SENDME cell is a Tor control cell that tells a relay that the client has consumed the
-    data and instructs it to send more data. As long as this SENDME cell is sent periodically, the exit relay will not
-    break the connection and will continue to send the data, eventually overwhelming the victim entry relay's capacity.
-    The bandwidth cost for the attacker is only the cost of sending the SENDME cells.<br>
+        Now, the client has to effectively trick the exit relay into sending more data. It can accomplish this by
+        sending a
+        SENDME cell to the exit. This SENDME cell is a Tor control cell that tells a relay that the client has consumed
+        the
+        data and instructs it to send more data. As long as this SENDME cell is sent periodically, the exit relay will
+        not
+        break the connection and will continue to send the data, eventually overwhelming the victim entry relay's
+        capacity.
+        The bandwidth cost for the attacker is only the cost of sending the SENDME cells.<br>
     <p>
-    The best part is that the attacker can be anonymized themselves by simply using another instance of Tor to run the
-    attack from, ironically using the same service to protect themselves that they are attacking.
+        The best part is that the attacker can be anonymized themselves by simply using another instance of Tor to run
+        the
+        attack from, ironically using the same service to protect themselves that they are attacking.
     </p>
+    <img src="efficient-method.png" style="width: 100%;"/><div style="font-size: 8pt; text-align: center; font-style: italic;">Source: The lead author, Rob Jansen's website [6]</div>
+    <h2>Defense against the Sniper Attack</h2>
+    <p>The paper discusses a few defenses that can be employed against the Sniper Attack. It must be noted here that the
+        authors communicated to the Tor Project all of the details about the attack, and Tor has implemented defenses
+        against it since then.</p>
+    <ol>
+        <li>
+            Authenticated SENDMEs: The reason that sending the SENDME cell works to trick the exit relay into sending
+            more data is that the exit relay has no way of knowing whether the client actually received the data, and
+            accepts the SENDME cell trusting it to be accurate. This defense suggests demanding some sort of proof that
+            the data was used before sending any more in a challenge-response mechanism.<br>
+            WEAKNESS:
+            This method has a weakness, in that it doesn't prevent the initial queuing from taking place, so while if
+            the challenge-response fails the circuit is broken, a parallel attack from another client could still
+            overflow the victim relay.
+        </li>
+        <br>
+        <li>
+            Queue Length Limit: This defense works by limiting the size of the data a circuit may consume by limiting
+            the queue size. If the queue size grows larger than the allowed size, it is seen as a potential attack and
+            the circuit is destroyed.<br>
+            WEAKNESS:
+            This defense is once again vulnerable to parallel attacks from multiple clients. Further, choosing the right
+            queue size is an issue, since we don't want benign circuits to be killed either.
+        </li>
+        <br>
+        <li>
+            Adaptive Circuit Killing: This defense tries to deal with the possibility of parallel attacks. Here it
+            allows relays to kill circuits once the total memory consumed crosses a threshold. The issue arises as to
+            how to decide which circuit to kill. One option is to kill the circuit that is consuming the largest queue
+            size. The weakness of this is that the attacker could simply launch multiple attacks using low queue sizes,
+            and so a benign circuit that happens to have a queue size greater than the attacker's queue size would get
+            killed instead. The paper instead suggests picking the circuit to kill based on time of arrival. This
+            defense mechanism is simple and easy to implement as well.
+        </li>
+    </ol>
+    <h2>My Assessment</h2>
+    <p>This paper provides a very strong case for the attack working. The Sniper Attack is a well-described, systematic
+        approach to disabling the Tor network. It would have been easy for them to have simply described the attack and
+        its implications and left it at that. So I liked that they also provided multiple ways to secure against their
+        own attack, and also pointed out the weakness in some of those methods as well. I further liked that the authors
+        communicated all of their research with the Tor Project and worked with them to develop workarounds that are now
+        officially in place.</p>
+    <p>Speaking of the defenses, however, I'm not sure I fully agree with the defenses. I do find that even their best
+        defense wasn't fully perfect. Killing circuits based on any given metric will cause many false positives to
+        occur and would cause benign circuits to be killed. The defense would thus indirectly but effectively actually
+        cause a denial of service.</p>
+    <h2>Other Papers</h2>
+    <p>This was a major paper about an attack developed by the US Naval Research Laboratory, so it was understandably
+        cited by a large number of future publications.
+    </p>
+    <p>Some of the other papers that cite this paper:
+    <ul>
+        <li>S. Kim, J. Han, J. Ha, T. Kim and D. Han, "Enhancing Security and Privacy of Tor's Ecosystem by Using Trusted
+            Execution Environments," in NSDI.
+        </li>
+        <li>S. Kim, J. Han, J. Ha, T. Kim and D. Han, "SGX-Tor: A Secure and Practical Tor Anonymity Network With SGX
+            Enclaves," in IEEE/ACM Transactions on Networking.
+        </li>
+        <li>M. Khan, M. Zohaib, and I. Ahmad, "Security Threats and Attacks on Tor," in CEUR Workshop
+            Proceedings.
+        </li>
+    </ul>
+
+    <p>Relevant to our topic, a paper titled "Enhancing Security and Privacy of Tor’s Ecosystem by Using Trusted
+        Execution Environments" suggested using Trusted Execution Environments like Intel SGX to better protect the
+        anonymous network. The authors developed a version of Tor called SGX Tor that incorporated this suggestion. They
+        tested their new method to make sure it wouldn't succumb to the Sniper Attack, and now list it among the attacks
+        that their SGX Tor implementation can thwart.</p>
+    <h2>References</h2>
+    <ol>
+        <li>https://www.nrl.navy.mil/itd/chacs/sites/www.nrl.navy.mil.itd.chacs/files/pdfs/13-1231-3743.pdf</li>
+        <li>https://people.dsv.su.se/~jpalme/society/anonymity.html</li>
+        <li>https://www.usenix.org/system/files/conference/nsdi17/nsdi17-kim-seongmin.pdf</li>
+        <li>https://ieeexplore.ieee.org/abstract/document/8464097/</li>
+        <li>http://ceur-ws.org/Vol-2144/paper4.pdf</li>
+        <li>https://www.robgjansen.com/talks/sniper-dcaps-20131011.pdf</li>
+    </ol>
 </section>
 </body>
 </html>
