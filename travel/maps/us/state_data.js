@@ -4,6 +4,11 @@ var states = {
 		visited: "2018-03-05",
 		description: "Huntsville and US Space and Rocket Center"
 	},
+	CA: {
+    name: "California",
+    visited: "2018-09-27",
+    description: "Google on-site interview"
+  },
   DC2: {
     name: "Washington, District of Columbia",
     visited: "2017-09-28",
@@ -12,6 +17,10 @@ var states = {
   DE: {
     name: "Delaware",
     passed: "2017-12-22"
+  },
+  GA: {
+    name: "Georgia",
+    passed: "2018-09-27"
   },
 	LA: {
 		name: "Louisiana",
@@ -51,7 +60,7 @@ var states = {
 		name: "Pennsylvania",
 		passed: "2017-12-27",
 		visited: "2018-07-07",
-    description: "Weekend visiting Tegie"
+    description: "Philly and Hershey"
 	},
 	SC: {
 		name: "South Carolina",
