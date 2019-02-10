@@ -29,26 +29,6 @@ header h2 {
     font-family: Raleway, sans-serif;
     letter-spacing: 1px;
 }
-.projects {
-    width: 100%;
-    display: inline-block;
-}
-.project {
-    width: 27%;
-    height: auto;
-    min-height: 130px;
-    float: left;
-    margin-left: 5%;
-    margin-top: 60px;
-}
-.project h3 {
-    font-weight: normal;
-}
-.project h4 {
-    font-weight: normal;
-    font-size: 9pt;
-}
-.footer {
-    text-align: center;
-    font-size: 8pt;
+.courses {
+	margin: 10px 50px;
 }
