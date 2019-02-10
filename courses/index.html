@@ -10,35 +10,33 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	<link href="courses.css" rel="stylesheet">
+    <script src="courselist.js"></script>
 </head>
 <body>
 
 
 <header>
     <h1>Sourabh Shetty</h1>
-	<h2>Courses</h1>
+	<h2>Courses</h2>
 </header>
 
-<div class="courses">
-<ul>
-<li>Student Police Academy - Virginia Tech Police Department</li>
-<li>CINE 2064 - Introduction to Cinema Production</li>
-<li>CINE 2054 - Introduction to Cinema (Audit)</li>
-<li>PSYC 1004 - Introductory Psychology (Audit)</li>
-<li>CS 4624 - Multimedia, Hypertext and Information Access</li>
-<li>CS 5590 - System and Software Security</li>
-<li>CS 5974 - Independent Study - Dr. Eli Tilevich</li>
-<li>CS 6704 - Advanced Topics in Software Engineering</li>
-<li>CS 5984 - Special Study: Big Data Text Summarization</li>
-<li>CS 5584 - Network Security</li>
-<li>CS 5944 - Summer Internship - MicroStrategy</li>
-<li>CS 5754 - Virtual Environments - Dr. Doug Bowman</li>
-<li>CS 5714 - Usability Engineering</li>
-<li>CS 5704 - Software Engineering - Dr. Na Meng</li>
-<li>CS 5114 - Theory of Algorithms</li>
-<li>CS 5764 - Information Visualization</li>
-</ul>
-
+<div class="courses" id="courses">
 </div>
+
+<script type="text/javascript">
+  let coursesDOM = document.getElementById("courses");
+  courseList.forEach((course) => {
+    let courseField = course.field;
+    let courseDOM = `
+            <div class="course">
+                <span class="courseField" style="background-color: ${fieldColor[courseField]}">${courseField}</span>
+                <div class="courseName">${course.name}</div>
+                <div class="courseInstructor">${course.instructor}</div>
+                <div class="courseSchool">${course.school}</div>
+            </div>
+        `;
+    coursesDOM.innerHTML = coursesDOM.innerHTML + courseDOM;
+  });
+</script>
 </body>
 </html>
