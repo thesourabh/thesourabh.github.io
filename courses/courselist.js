@@ -2,7 +2,7 @@ const courseList = [
   {
     name: "Student Police Academy",
     field: "Police",
-    number: "CINE 2064",
+    number: "",
     instructor: "Various",
     school: "Virginia Tech Police Department"
   },
