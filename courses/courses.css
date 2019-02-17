@@ -31,7 +31,8 @@ header h2 {
     letter-spacing: 1px;
 }
 .courses {
-	margin: 10px 50px;
+	margin: 0 auto;
+	height: auto;
 }
 .course {
     float: left;

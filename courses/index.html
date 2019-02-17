@@ -24,8 +24,13 @@
 </div>
 
 <script type="text/javascript">
-  let coursesDOM = document.getElementById("courses");
+  let dynamicStyling = function () {
+    let coursesDOM = document.getElementById("courses");
+    let coursesWidth = Math.floor(window.innerWidth / 330) * 330;
+    coursesDOM.style.width = coursesWidth + "px";
+  };
   // courseList.sort((a, b) => a.number.localeCompare(b.number));
+  let coursesDOM = document.getElementById("courses");
   courseList.forEach((course) => {
     let courseField = course.category;
     let courseDOM = `
@@ -37,6 +42,8 @@
             </div>
         `;
     coursesDOM.innerHTML = coursesDOM.innerHTML + courseDOM;
+    dynamicStyling();
+    window.addEventListener("resize", dynamicStyling);
   });
 </script>
 </body>
