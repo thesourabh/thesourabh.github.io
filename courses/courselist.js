@@ -339,16 +339,16 @@ const courseList = [
   },
   {
     name: "Microprocessors and Microcontrollers",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Electronics Engineering",
+		category: "Electronics",
     number: "310243",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Digital Signal Processing",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Electronics Engineering",
+		category: "Electronics",
     number: "310244",
     instructor: "DYPSOE",
     school: "University of Pune"
@@ -411,16 +411,16 @@ const courseList = [
   },
   {
     name: "Microprocessors and Interfacing Techniques",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Electronics Engineering",
+		category: "Electronics",
     number: "210249",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Engineering Mathematics III",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Mathematics",
+		category: "Mathematics",
     number: "207003",
     instructor: "DYPSOE",
     school: "University of Pune"
@@ -467,8 +467,8 @@ const courseList = [
   },
   {
     name: "Digital Electronics and Logic Design",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Electronics Engineering",
+		category: "Electronics",
     number: "210243",
     instructor: "DYPSOE",
     school: "University of Pune"
@@ -483,48 +483,48 @@ const courseList = [
   },
   {
     name: "Humanities and Social Science",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Humanities",
+		category: "Humanities",
     number: "207005",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Engineering Mathematics II",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Mathematics",
+		category: "Mathematics",
     number: "107008",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Applied Science II",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Physics",
+		category: "Physics",
     number: "107009",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Engineering Mechanics",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Mechanical Engineering",
+		category: "Mechanical Engineering",
     number: "101010",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Basic Electronics Engineering",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Electronics Engineering",
+		category: "Electronics",
     number: "104011",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Engineering Graphics II",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Civil Engineering",
+		category: "Civil Engineering",
     number: "102012",
     instructor: "DYPSOE",
     school: "University of Pune"
@@ -539,16 +539,16 @@ const courseList = [
   },
   {
     name: "Engineering Mathematics I",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Mathematics",
+		category: "Mathematics",
     number: "107001",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Applied Science I",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Chemistry",
+		category: "Chemistry",
     number: "107002",
     instructor: "DYPSOE",
     school: "University of Pune"
@@ -563,32 +563,32 @@ const courseList = [
   },
   {
     name: "Basic Electrical Engineering",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Electrical Engineering",
+		category: "Electrical Engineering",
     number: "103004",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Basic Civil and Environmental Engineering",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Civil Engineering",
+		category: "Civil Engineering",
     number: "101005",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Engineering Graphics I",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Civil Engineering",
+		category: "Civil Engineering",
     number: "102006",
     instructor: "DYPSOE",
     school: "University of Pune"
   },
   {
     name: "Manufacturing Practices",
-    field: "Computer Science",
-		category: "ComputerScience",
+    field: "Mechanical Engineering",
+		category: "Mechanical Engineering",
     number: "111007",
     instructor: "DYPSOE",
     school: "University of Pune"
@@ -599,6 +599,7 @@ const courseList = [
 const categoryColor = {
   "ComputerScience": "LimeGreen",
   "ComputerScienceOnline": "ForestGreen",
+  "Electronics": "DarkGreen",
   "Cinema": "OrangeRed",
   "Criminology": "MediumBlue",
   "Economics": "#39CCCC",

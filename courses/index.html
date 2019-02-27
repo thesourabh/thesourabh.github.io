@@ -32,10 +32,10 @@
   // courseList.sort((a, b) => a.number.localeCompare(b.number));
   let coursesDOM = document.getElementById("courses");
   courseList.forEach((course) => {
-    let courseField = course.category;
+    let category = course.category;
     let courseDOM = `
             <div class="course">
-                <span class="courseField" style="background-color: ${course.color || categoryColor[courseField] || "gray"}">${course.field}</span>
+                <span class="courseField" style="background-color: ${course.color || categoryColor[category] || "gray"}">${course.field}</span>
                 <div class="courseName">${course.name}</div>
                 <div class="courseInstructor">${course.instructor}</div>
                 <div class="courseSchool">${course.school}</div>
