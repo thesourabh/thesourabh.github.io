@@ -18,6 +18,11 @@ var states = {
     name: "Delaware",
     passed: "2017-12-22"
   },
+  FL: {
+    name: "Florida",
+    visited: "2019-03-11",
+    description: "Daytona Beach / Spring Break"
+  },
   GA: {
     name: "Georgia",
     passed: "2018-09-27"
