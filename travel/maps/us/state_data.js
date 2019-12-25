@@ -1,18 +1,19 @@
 var states = {
 	AL: {
 		name: "Alabama",
-		visited: "2018-03-05",
-		description: "Huntsville and US Space and Rocket Center"
+		visited: "2018-03-05"
 	},
 	CA: {
     name: "California",
-    visited: "2018-09-27",
-    description: "Google on-site interview"
+    visited: "2018-09-27"
+  },
+	CO: {
+    name: "Colorado",
+    visited: "2019-10-21"
   },
   DC2: {
     name: "Washington, District of Columbia",
-    visited: "2017-09-28",
-    description: "Interview and later summer internship"
+    visited: "2017-09-28"
   },
   DE: {
     name: "Delaware",
@@ -20,8 +21,7 @@ var states = {
   },
   FL: {
     name: "Florida",
-    visited: "2019-03-11",
-    description: "Daytona Beach / Spring Break"
+    visited: "2019-03-11"
   },
   GA: {
     name: "Georgia",
@@ -29,58 +29,52 @@ var states = {
   },
 	LA: {
 		name: "Louisiana",
-		visited: "2018-03-06",
-    description: "New Orleans / Spring Break"
+		visited: "2018-03-06"
 	},
 	MD: {
 		name: "Maryland",
 		passed: "2018-07-06",
-		visited: "2018-08-13",
-		description: "University of Maryland, College Park"
+		visited: "2018-08-13"
 	},
 	MS: {
 		name: "Mississippi",
 		passed: "2018-03-05",
-		visited: "2018-03-07",
-    description: "Biloxi Beach"
+		visited: "2018-03-07"
 	},
 	NC: {
 		name: "North Carolina",
 		passed: "2018-03-10",
-		visited: "2018-08-18",
-		description: "Asheville on the way to Smokey Mountains"
+		visited: "2018-08-18"
 	},
 	NJ: {
 		name: "New Jersey",
     passed: "2017-12-27",
-    visited: "2018-07-21",
-		description: "New Brunswick"
+    visited: "2018-07-21"
 	},
 	NY: {
 		name: "New York",
-		visited: "2017-12-22",
-    description: "Winter break trip"
+		visited: "2017-12-22"
 	},
 	PA: {
 		name: "Pennsylvania",
 		passed: "2017-12-27",
-		visited: "2018-07-07",
-    description: "Philly and Hershey"
+		visited: "2018-07-07"
 	},
 	SC: {
 		name: "South Carolina",
-		visited: "2018-03-10",
-    description: "Myrtle Beach"
+		visited: "2018-03-10"
 	},
 	TN: {
 		name: "Tennessee",
-		visited: "2018-03-04",
-    description: "Nashville"
+		visited: "2018-03-04"
 	},
 	VA: {
 		name: "Virginia",
-		visited: "2017-08-17",
-    description: "School. First point of entry."
+		visited: "2017-08-17"
+	},
+	WA: {
+		name: "Washington",
+		visited: "2019-10-16"
 	},
 	WV: {
 		name: "West Virginia",
