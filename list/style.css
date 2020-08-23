@@ -3,7 +3,7 @@ margin: 0;
 padding: 0;
 }
 body{
-font-family: 'Segoe UI Light';
+font-family: monospace;
 background: #eee;
 }
 a{
@@ -12,35 +12,26 @@ text-decoration: none;
 header{
 margin: 0 auto;
 width: 900px;
-font-family: 'Raleway','Segoe UI Light',sans-serif;
+font-family: 'Calibri', sans-serif;
 }
 
 .title{
+font-family: 'Raleway','Segoe UI Light',sans-serif;
 padding: 10px 0px;
 font-size: 54px;
 color: #111;
-text-shadow: 2px 2px 10px #bbb;
+letter-spacing: -1px;
+}
+.title .title-name {
 letter-spacing: -4px;
 }
 .subtitle{
 padding: 10px 0px;
 padding-bottom: 24px;
 font-family: 'Segoe UI Light',sans-serif;
-font-size: 30px;
+font-size: 21px;
 color: #666;
 text-shadow: 1px 1px 10px #ddd;
-}
-.title-detail{
-font-size: 26px;
-font-family: 'Open Sans Condensed','Segoe UI Light',sans-serif;
-color: #555;
-position: relative;
-min-height: 100px;
-}
-.title-detail span{
-position: absolute;
-width: 600px;
-right: 20px;
 }
 .content{
 margin: 0 auto;
