@@ -11,6 +11,10 @@ var states = {
     name: "Colorado",
     visited: "2019-10-21"
   },
+	CT: {
+    name: "Connecticut",
+    passed: "2020-10-25"
+  },
   DC2: {
     name: "Washington, District of Columbia",
     visited: "2017-09-28"
@@ -30,6 +34,10 @@ var states = {
 	LA: {
 		name: "Louisiana",
 		visited: "2018-03-06"
+	},
+	MA: {
+		name: "Massachusetts",
+		visited: "2020-10-25"
 	},
 	MD: {
 		name: "Maryland",
@@ -55,10 +63,18 @@ var states = {
 		name: "New York",
 		visited: "2017-12-22"
 	},
+	OR: {
+		name: "Oregon",
+		passed: "2020-09-26"
+	},
 	PA: {
 		name: "Pennsylvania",
 		passed: "2017-12-27",
 		visited: "2018-07-07"
+	},
+	RI: {
+		name: "Rhode Island",
+		passed: "2020-10-25",
 	},
 	SC: {
 		name: "South Carolina",

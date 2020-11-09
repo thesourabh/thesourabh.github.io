@@ -22,11 +22,11 @@ path#frames {
 }
 
 .visited {
-    fill: red;
+    fill: #A00C03;
 }
 
 .passed {
-    fill: green;
+    fill: #505050;
 }
 
 #map {
