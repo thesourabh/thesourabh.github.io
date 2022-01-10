@@ -44,6 +44,10 @@ var states = {
 		passed: "2018-07-06",
 		visited: "2018-08-13"
 	},
+	ME: {
+		name: "Maine",
+		visited: "2021-09-30"
+	},
 	MS: {
 		name: "Mississippi",
 		passed: "2018-03-05",
@@ -53,6 +57,10 @@ var states = {
 		name: "North Carolina",
 		passed: "2018-03-10",
 		visited: "2018-08-18"
+	},
+	NH: {
+		name: "New Hampshire",
+		visited: "2021-10-03"
 	},
 	NJ: {
 		name: "New Jersey",
@@ -65,7 +73,8 @@ var states = {
 	},
 	OR: {
 		name: "Oregon",
-		passed: "2020-09-26"
+		passed: "2020-09-26",
+		visited: "2021-04-14"
 	},
 	PA: {
 		name: "Pennsylvania",
@@ -87,6 +96,10 @@ var states = {
 	VA: {
 		name: "Virginia",
 		visited: "2017-08-17"
+	},
+	VT: {
+		name: "Vermont",
+		visited: "2021-12-18"
 	},
 	WA: {
 		name: "Washington",
