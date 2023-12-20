@@ -29,7 +29,8 @@ var states = {
   },
   GA: {
     name: "Georgia",
-    passed: "2018-09-27"
+    passed: "2018-09-27",
+    visited: "2023-07-08"
   },
 	LA: {
 		name: "Louisiana",
@@ -66,6 +67,10 @@ var states = {
 		name: "New Jersey",
     passed: "2017-12-27",
     visited: "2018-07-21"
+	},
+	NV: {
+		name: "Nevada",
+		visited: "2022-07-15"
 	},
 	NY: {
 		name: "New York",
